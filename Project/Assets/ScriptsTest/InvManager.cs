@@ -25,7 +25,7 @@ public class InvManager : MonoBehaviour
     public void DrawInventory()
     {
         Debug.Log("DrawInventory ");
-        foreach(InventoryItem item in InvSystem.current.inv)
+        foreach(InventoryItem item in InvSystem.current.inventory)
         {
             AddInventorySlot(item);
         }

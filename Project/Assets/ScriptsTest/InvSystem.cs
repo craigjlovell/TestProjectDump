@@ -8,12 +8,13 @@ public class InvSystem : MonoBehaviour
     public event Action onInventoryChangeEvent;
     public static InvSystem current;
     private Dictionary<InventoryItemData, InventoryItem> m_itemDictionary;
-    public List<InventoryItem> inv;
+    [SerializeField]
+    public List<InventoryItem> inventory;// { get; set; } 
 
     private void Awake()
     {
         current = this;
-        inv = new List<InventoryItem>();
+        inventory = new List<InventoryItem>();
         m_itemDictionary = new Dictionary<InventoryItemData, InventoryItem>();
     }
 
@@ -44,7 +45,7 @@ public class InvSystem : MonoBehaviour
         else
         {
             InventoryItem newItem = new InventoryItem(refData);
-            inv.Add(newItem);
+            inventory.Add(newItem);
             m_itemDictionary.Add(refData, newItem);
         }
     }
@@ -57,7 +58,7 @@ public class InvSystem : MonoBehaviour
 
             if(value.stackSize == 0)
             {
-                inv.Remove(value);
+                inventory.Remove(value);
                 m_itemDictionary.Remove(refData);
             }
         }

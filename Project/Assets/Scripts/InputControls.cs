@@ -25,11 +25,11 @@ public class InputControls : MonoBehaviour
         }
         else
         {
-            moveJoystick.gameObject.SetActive(false);
-            lookJoystick.gameObject.SetActive(false);
-            look.useJoystick = false;
-            look.useMouse = true;
-            moveJoystick.syncJoyStickInput = joysticks;
+            //moveJoystick.gameObject.SetActive(false);
+            //lookJoystick.gameObject.SetActive(false);
+            //look.useJoystick = false;
+            //look.useMouse = true;
+            //moveJoystick.syncJoyStickInput = joysticks;
         }
 
     }

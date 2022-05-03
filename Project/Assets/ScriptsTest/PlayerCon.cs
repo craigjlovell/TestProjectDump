@@ -94,7 +94,7 @@ public class PlayerCon : MonoBehaviour
         ItemObject item = hit.collider.GetComponent<ItemObject>();
         if (item != null)
         {
-            InvSystem.current.InventoryEvent();
+            //InvSystem.current.InventoryEvent();
             item.OnHandlePickupItem();
         }
     }
